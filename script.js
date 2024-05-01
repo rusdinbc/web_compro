@@ -1,12 +1,10 @@
-function validateForm() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+// JavaScript untuk validasi form login (bisa ditambahkan sesuai kebutuhan)
+document.querySelector('form').addEventListener('submit', function(event) {
+    var username = document.querySelector('input[name="username"]').value;
+    var password = document.querySelector('input[name="password"]').value;
 
-    // Contoh validasi sederhana
-    if (username === "" || password === "") {
-        alert("Username dan password harus diisi");
-        return false;
+    if (username === '' || password === '') {
+        alert('Username dan password harus diisi!');
+        event.preventDefault(); // Mencegah form dari pengiriman jika input kosong
     }
-    // Anda dapat menambahkan validasi tambahan di sini sesuai kebutuhan
-    // Misalnya, validasi panjang password, karakter khusus, dll.
-}
+});
